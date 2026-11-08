@@ -2,3 +2,7 @@
 素材/Ryan_Chiang_*.html
 *.tmp
 Thumbs.db
+
+# full local deck copies (speaker notes, other variants): never publish by accident
+cocomart/*.html
+athena/*.md
