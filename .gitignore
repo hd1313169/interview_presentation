@@ -6,3 +6,8 @@ Thumbs.db
 # full local deck copies (speaker notes, other variants): never publish by accident
 cocomart/*.html
 athena/*.md
+
+# bear deck: employer-named source copy, notes copy, build scripts
+bear/*.md
+bear/*.notes.html
+bear/_*
