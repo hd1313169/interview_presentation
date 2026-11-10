@@ -18,10 +18,10 @@ The root `index.html` SHALL be the published bear-edition deck itself, so the sh
 - **THEN** slide 5 is shown and the URL stays at the root
 
 ### Requirement: Old deck path forwards to the root
-`bear/RyanChiang_presentation.html` SHALL redirect to the site root, preserving query string and hash, and its fallback link SHALL point to the same target.
+`presentation/RyanChiang_presentation.html` SHALL redirect to the site root, preserving query string and hash, and its fallback link SHALL point to the same target.
 
 #### Scenario: Old link still works
-- **WHEN** a visitor opens `bear/RyanChiang_presentation.html#5`
+- **WHEN** a visitor opens `presentation/RyanChiang_presentation.html#5`
 - **THEN** the browser lands on the root at slide 5
 
 ### Requirement: Prior deck untouched
