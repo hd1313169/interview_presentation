@@ -7,7 +7,7 @@ Thumbs.db
 cocomart/*.html
 athena/*.md
 
-# bear deck: employer-named source copy, notes copy, build scripts
-bear/*.md
-bear/*.notes.html
-bear/_*
+# current deck: employer-named source docs, notes copy, build scripts
+presentation/*.md
+presentation/_*
+*.notes.html
