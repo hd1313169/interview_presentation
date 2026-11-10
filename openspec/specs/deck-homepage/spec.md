@@ -6,23 +6,23 @@ Defines how the GitHub Pages root resolves to the current interview deck, so vis
 
 ## Requirements
 
-### Requirement: Root opens the Athena deck
-The root `index.html` SHALL redirect to the bear-edition deck at `bear/RyanChiang_presentation.html`, preserving query string and hash.
+### Requirement: Root serves the current deck
+The root `index.html` SHALL be the published bear-edition deck itself, so the short site URL shows the presentation without a redirect.
 
 #### Scenario: Visit the site root
 - **WHEN** a visitor opens the Pages root URL
-- **THEN** the browser lands on the bear deck and the first slide is shown
+- **THEN** the deck loads at that URL and the first slide is shown
 
-#### Scenario: Query and hash preserved
-- **WHEN** the root is opened with `?x=1#5`
-- **THEN** the deck URL carries the same query and hash
+#### Scenario: Slide hash
+- **WHEN** the root is opened with `#5`
+- **THEN** slide 5 is shown and the URL stays at the root
 
-### Requirement: No dangling redirect
-The redirect target SHALL exist in the repository at the path the redirect names, and the fallback link in the page SHALL point to the same target.
+### Requirement: Old deck path forwards to the root
+`bear/RyanChiang_presentation.html` SHALL redirect to the site root, preserving query string and hash, and its fallback link SHALL point to the same target.
 
-#### Scenario: Target resolves
-- **WHEN** the redirect target path is checked
-- **THEN** the file exists and the fallback anchor uses the identical path
+#### Scenario: Old link still works
+- **WHEN** a visitor opens `bear/RyanChiang_presentation.html#5`
+- **THEN** the browser lands on the root at slide 5
 
 ### Requirement: Prior deck untouched
 Creating the new deck and redirect SHALL NOT modify any file under `cocomart/` or `athena/`.
