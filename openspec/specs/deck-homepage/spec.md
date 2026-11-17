@@ -7,7 +7,7 @@ Defines how the GitHub Pages root resolves to the current interview deck, so vis
 ## Requirements
 
 ### Requirement: Root serves the current deck
-The root `index.html` SHALL be the published bear-edition deck itself, so the short site URL shows the presentation without a redirect.
+The root `index.html` SHALL be the published AI + B2C edition deck itself, so the short site URL shows the presentation without a redirect. The previous bear-edition deck SHALL remain available at `bear/RyanChiang_presentation.html`.
 
 #### Scenario: Visit the site root
 - **WHEN** a visitor opens the Pages root URL
@@ -16,6 +16,10 @@ The root `index.html` SHALL be the published bear-edition deck itself, so the sh
 #### Scenario: Slide hash
 - **WHEN** the root is opened with `#5`
 - **THEN** slide 5 is shown and the URL stays at the root
+
+#### Scenario: Previous edition still reachable
+- **WHEN** a visitor opens `bear/RyanChiang_presentation.html`
+- **THEN** the bear-edition deck loads
 
 ### Requirement: Old deck path forwards to the root
 `presentation/RyanChiang_presentation.html` SHALL redirect to the site root, preserving query string and hash, and its fallback link SHALL point to the same target.

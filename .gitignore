@@ -11,3 +11,8 @@ athena/*.md
 presentation/*.md
 presentation/_*
 *.notes.html
+
+# AI + B2C deck build tools/assets, bear edition source docs and tools
+deck/_*
+bear/*.md
+bear/_*
